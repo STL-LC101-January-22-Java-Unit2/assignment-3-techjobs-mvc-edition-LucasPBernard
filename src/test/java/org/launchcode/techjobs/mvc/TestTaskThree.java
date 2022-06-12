@@ -106,7 +106,7 @@ public class TestTaskThree {
         Method displaySearchResultsMethod = searchControllerClass.getMethod("displaySearchResults", Model.class, String.class, String.class);
 
         new Expectations() {{
-            JobData.findByColumnAndValue("skill", "ruby");
+            JobData.findByColumnAndValue("skill", "ruby", JobData.findAll());
         }};
 
         Model model = new ExtendedModelMap();
